@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  dev:
+    container_name: docker_ex-dev
+    image: docker-ex
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:3000"
+    volumes:
+      - ./:/app
